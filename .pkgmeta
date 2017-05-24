@@ -8,12 +8,12 @@ manual-changelog:
 enable-nolib-creation: yes
 
 externals:
-    LibStub: 
+    !LibUIDropDownMenu/LibStub: 
         url: https://repos.wowace.com/wow/libstub/trunk
 
 move-folders:
-    LibUIDropDownMenu: !LibUIDropDownMenu
-    LibUIDropDownMenu.toc: !LibUIDropDownMenu\!LibUIDropDownMenu.toc
+    LibUIDropDownMenu: !LibUIDropDownMenu/LibUIDropDownMenu
+    LibUIDropDownMenu.toc: !LibUIDropDownMenu/!LibUIDropDownMenu.toc
 
-#ignore:
-#    - LibUIDropDownMenu.toc
+ignore:
+    - LibStub
