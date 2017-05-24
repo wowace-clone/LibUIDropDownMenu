@@ -1,5 +1,4 @@
-
-package-as: !LibUIDropDownMenu
+package-as: "!LibUIDropDownMenu"
 
 manual-changelog:
     filename: Docs/Revision.txt
@@ -8,12 +7,12 @@ manual-changelog:
 enable-nolib-creation: yes
 
 externals:
-    !LibUIDropDownMenu/LibStub: 
+    LibStub: 
         url: https://repos.wowace.com/wow/libstub/trunk
 
-move-folders:
-    LibUIDropDownMenu: !LibUIDropDownMenu/LibUIDropDownMenu
-    LibUIDropDownMenu.toc: !LibUIDropDownMenu/!LibUIDropDownMenu.toc
+#move-folders:
+#    LibUIDropDownMenu: !LibUIDropDownMenu/LibUIDropDownMenu
+#    LibUIDropDownMenu.toc: !LibUIDropDownMenu/!LibUIDropDownMenu.toc
 
 ignore:
-    - LibStub
+    - LibUIDropDownMenu.toc
