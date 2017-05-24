@@ -1,0 +1,14 @@
+package-as: !LibUIDropDownMenu
+
+manual-changelog:
+    filename: Docs/Revision.txt
+    markup-type: plain
+
+enable-nolib-creation: yes
+
+externals:
+    LibStub: 
+        url: https://repos.wowace.com/wow/libstub/trunk
+
+ignore:
+    - LibUIDropDownMenu.toc

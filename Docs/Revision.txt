@@ -1,0 +1,7 @@
+$Id$
+Revision History:
+=================
+
+v1.00.7020024015 (2017/05/24)
+----------------------------
+- Clone from NoTaint_UIDropDownMenu vv7.2.0.24015-r2
