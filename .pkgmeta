@@ -13,5 +13,5 @@ externals:
 move-folders:
     LibUIDropDownMenu.toc: !LibUIDropDownMenu.toc
 
-ignore:
+#ignore:
 #    - LibUIDropDownMenu.toc
