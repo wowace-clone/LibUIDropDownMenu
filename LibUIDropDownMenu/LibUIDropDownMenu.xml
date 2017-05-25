@@ -3,7 +3,7 @@
 ..\FrameXML\UI.xsd">
 	<Script file="LibUIDropDownMenu.lua"/>
 	<Include file="LibUIDropDownMenuTemplates.xml"/>
-	<Script file="LibEasyMenu"/>
+	<Script file="LibEasyMenu.lua"/>
 	<Button name="L_DropDownList1" toplevel="true" frameStrata="FULLSCREEN_DIALOG" inherits="L_UIDropDownListTemplate" hidden="true" id="1">
 		<Size>
 			<AbsDimension x="180" y="10"/>
