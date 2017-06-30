@@ -2,6 +2,10 @@ $Id$
 Revision History:
 =================
 
+v1.02.7030024484 (2017/06/30)
+-----------------------------
+- Updated PlaySound API's usage method to support both 7.2.5 and 7.3.0 of WoW clients
+
 v1.01.7020024015 (2017/05/25)
 ----------------------------
 - Fixed the wrong name of LibEasyMenu.lua specified in LibUIDropDownMenu.xml
