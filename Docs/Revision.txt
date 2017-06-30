@@ -2,6 +2,10 @@ $Id$
 Revision History:
 =================
 
+v1.03.7030024484 (2017/06/30)
+-----------------------------
+- Update version number
+
 v1.02.7030024484 (2017/06/30)
 -----------------------------
 - Updated PlaySound API's usage method to support both 7.2.5 and 7.3.0 of WoW clients
