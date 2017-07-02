@@ -2,6 +2,10 @@ $Id$
 Revision History:
 =================
 
+v1.04.7030024484 (2017/07/02)
+-----------------------------
+- Changed soundkit's ID to key indicator likes SOUNDKIT.U_CHAT_SCROLL_BUTTON
+
 v1.03.7030024484 (2017/06/30)
 -----------------------------
 - Update version number
