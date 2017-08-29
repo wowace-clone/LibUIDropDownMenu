@@ -2,6 +2,10 @@ $Id$
 Revision History:
 =================
 
+v1.05.7030024920 (2017/08/29)
+-----------------------------
+- ToC update to support WoW 7.3.0
+
 v1.04.7030024484 (2017/07/02)
 -----------------------------
 - Changed soundkit's ID to key indicator likes SOUNDKIT.U_CHAT_SCROLL_BUTTON
