@@ -13,7 +13,7 @@ local wipe = table.wipe
 local CreateFrame, GetCursorPosition, GetCVar, GetScreenHeight, GetScreenWidth, OpenColorPicker, PlaySound = CreateFrame, GetCursorPosition, GetCVar, GetScreenHeight, GetScreenWidth, OpenColorPicker, PlaySound
 
 -- ----------------------------------------------------------------------------
-local MAJOR_VERSION = "LibUIDropDownMenu-1.05.7030024920"
+local MAJOR_VERSION = "LibUIDropDownMenu-1.06.7030024931"
 local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
 
 local LibStub = _G.LibStub
@@ -817,7 +817,7 @@ function L_UIDropDownMenuButton_OnClick(self)
 	end
 
 	if ( playSound ) then
-		PlaySound(PlaySoundKitID and "UChatScrollButton" or SOUNDKIT.U_CHAT_SCROLL_BUTTON); 
+		PlaySound(SOUNDKIT.U_CHAT_SCROLL_BUTTON);
 	end
 end
 
