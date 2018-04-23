@@ -2,6 +2,20 @@ $Id$
 Revision History:
 =================
 
+v1.08.8000126433 (2018/xx/xx)
+-----------------------------
+- Sync with WoW 8.0.1.26433
+  - Added LibUIDropDownMenuTemplates.lua
+  - Added frame template: L_UIDropDownCustomMenuEntryTemplate
+  - Added local function GetChild()
+  - New custom frame functions:
+    - L_UIDropDownMenu_CheckAddCustomFrame()
+	- L_UIDropDownMenu_RegisterCustomFrame()
+  - New button attribute: info.customFrame
+  - Changes of L_UIDropDownMenu_AddSeparator() is to be reflected only on WoW 8.x.x
+    - L_UIDropDownMenu_AddSeparator(info, level) == > L_UIDropDownMenu_AddSeparator(level)
+	  No need to specify info there to prevent from messing up other menu items if info is to be re-used.
+
 v1.07.7030525961 (2018/04/23)
 -----------------------------
 - Remove external
