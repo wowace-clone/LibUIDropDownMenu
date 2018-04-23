@@ -10,9 +10,5 @@ externals:
     LibStub: 
         url: https://repos.wowace.com/wow/libstub/trunk
 
-#move-folders:
-#    LibUIDropDownMenu: !LibUIDropDownMenu/LibUIDropDownMenu
-#    LibUIDropDownMenu.toc: !LibUIDropDownMenu/!LibUIDropDownMenu.toc
-
 ignore:
     - LibUIDropDownMenu.toc

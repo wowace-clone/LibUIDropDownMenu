@@ -3,13 +3,12 @@
 -- Localized Lua globals.
 -- ----------------------------------------------------------------------------
 local _G = getfenv(0)
+local tonumber, type, string, table = tonumber, type, string, table
 local strsub, strlen, strmatch, gsub = strsub, strlen, strmatch, gsub
 local max, match = max, match
 local securecall, issecure = securecall, issecure
-local tonumber = tonumber
-local type = type
 local wipe = table.wipe
-
+-- WoW
 local CreateFrame, GetCursorPosition, GetCVar, GetScreenHeight, GetScreenWidth, OpenColorPicker, PlaySound = CreateFrame, GetCursorPosition, GetCVar, GetScreenHeight, GetScreenWidth, OpenColorPicker, PlaySound
 
 -- ----------------------------------------------------------------------------
@@ -42,7 +41,7 @@ L_UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = nil;
 -- List of open menus
 L_OPEN_DROPDOWNMENUS = {};
 
-local UIDropDownMenuDelegate = CreateFrame("FRAME");
+local L_UIDropDownMenuDelegate = CreateFrame("FRAME");
 
 function L_UIDropDownMenuDelegate_OnAttributeChanged (self, attribute, value)
 	if ( attribute == "createframes" and value == true ) then
@@ -54,7 +53,7 @@ function L_UIDropDownMenuDelegate_OnAttributeChanged (self, attribute, value)
 	end
 end
 
-UIDropDownMenuDelegate:SetScript("OnAttributeChanged", L_UIDropDownMenuDelegate_OnAttributeChanged);
+L_UIDropDownMenuDelegate:SetScript("OnAttributeChanged", L_UIDropDownMenuDelegate_OnAttributeChanged);
 
 function L_UIDropDownMenu_InitializeHelper (frame)
 	-- This deals with the potentially tainted stuff!
@@ -63,7 +62,7 @@ function L_UIDropDownMenu_InitializeHelper (frame)
 	end
 
 	-- Set the frame that's being intialized
-	UIDropDownMenuDelegate:SetAttribute("initmenu", frame);
+	L_UIDropDownMenuDelegate:SetAttribute("initmenu", frame);
 
 	-- Hide all the buttons
 	local button, dropDownList;
@@ -215,10 +214,10 @@ info.leftPadding = [nil, NUMBER] -- Number of pixels to pad the button on the le
 info.minWidth = [nil, NUMBER] -- Minimum width for this line
 ]]
 
-local UIDropDownMenu_ButtonInfo = {};
+local L_UIDropDownMenu_ButtonInfo = {};
 
 --Until we get around to making this betterz...
-local UIDropDownMenu_SecureInfo = {};
+--local UIDropDownMenu_SecureInfo = {};
 
 --local wipe = table.wipe;
 
@@ -229,7 +228,7 @@ function L_UIDropDownMenu_CreateInfo()
 --		securecall(wipe, UIDropDownMenu_SecureInfo);
 --		return UIDropDownMenu_SecureInfo;
 --	else
-		return wipe(UIDropDownMenu_ButtonInfo);
+		return wipe(L_UIDropDownMenu_ButtonInfo);
 --	end
 end
 
@@ -301,9 +300,9 @@ function L_UIDropDownMenu_AddButton(info, level)
 	local index = listFrame and (listFrame.numButtons + 1) or 1;
 	local width;
 
-	UIDropDownMenuDelegate:SetAttribute("createframes-level", level);
-	UIDropDownMenuDelegate:SetAttribute("createframes-index", index);
-	UIDropDownMenuDelegate:SetAttribute("createframes", true);
+	L_UIDropDownMenuDelegate:SetAttribute("createframes-level", level);
+	L_UIDropDownMenuDelegate:SetAttribute("createframes-index", index);
+	L_UIDropDownMenuDelegate:SetAttribute("createframes", true);
 
 	listFrame = listFrame or _G["L_DropDownList"..level];
 	local listFrameName = listFrame:GetName();
@@ -830,9 +829,9 @@ function L_ToggleDropDownMenu(level, value, dropDownFrame, anchorName, xOffset, 
 	if ( not level ) then
 		level = 1;
 	end
-	UIDropDownMenuDelegate:SetAttribute("createframes-level", level);
-	UIDropDownMenuDelegate:SetAttribute("createframes-index", 0);
-	UIDropDownMenuDelegate:SetAttribute("createframes", true);
+	L_UIDropDownMenuDelegate:SetAttribute("createframes-level", level);
+	L_UIDropDownMenuDelegate:SetAttribute("createframes-index", 0);
+	L_UIDropDownMenuDelegate:SetAttribute("createframes", true);
 	L_UIDROPDOWNMENU_MENU_LEVEL = level;
 	L_UIDROPDOWNMENU_MENU_VALUE = value;
 	local listFrame = _G["L_DropDownList"..level];
@@ -869,7 +868,7 @@ function L_ToggleDropDownMenu(level, value, dropDownFrame, anchorName, xOffset, 
 		-- Display stuff
 		-- Level specific stuff
 		if ( level == 1 ) then
-			UIDropDownMenuDelegate:SetAttribute("openmenu", dropDownFrame);
+			L_UIDropDownMenuDelegate:SetAttribute("openmenu", dropDownFrame);
 			listFrame:ClearAllPoints();
 			-- If there's no specified anchorName then use left side of the dropdown menu
 			if ( not anchorName ) then

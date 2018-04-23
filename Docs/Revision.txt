@@ -2,6 +2,12 @@ $Id$
 Revision History:
 =================
 
+v1.07.7030525961 (2018/04/23)
+-----------------------------
+- Remove external
+- Refine upvalue and local function pre-definition
+- Rename local parameters to make them consistent with others
+
 v1.07.7030024931 (2017/08/31)
 -----------------------------
 - Remove PlaySound compact code.
