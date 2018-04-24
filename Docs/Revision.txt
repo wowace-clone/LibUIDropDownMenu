@@ -2,7 +2,7 @@ $Id$
 Revision History:
 =================
 
-v1.08.8000126433 (2018/xx/xx)
+v1.08.8000126433 (2018/04/24)
 -----------------------------
 - Sync with WoW 8.0.1.26433
   - Added LibUIDropDownMenuTemplates.lua
