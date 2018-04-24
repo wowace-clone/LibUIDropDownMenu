@@ -375,7 +375,7 @@
 						end
 					</OnLeave>
 					<OnClick>
-						ToggleDropDownMenu(nil, nil, self:GetParent());
+						L_ToggleDropDownMenu(nil, nil, self:GetParent());
 						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
 					</OnClick>
 				</Scripts>
