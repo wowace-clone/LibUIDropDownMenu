@@ -15,6 +15,11 @@ v1.08.8000126433 (2018/xx/xx)
   - Changes of L_UIDropDownMenu_AddSeparator() is to be reflected only on WoW 8.x.x
     - L_UIDropDownMenu_AddSeparator(info, level) == > L_UIDropDownMenu_AddSeparator(level)
 	  No need to specify info there to prevent from messing up other menu items if info is to be re-used.
+- Fixed the lib's major version. 
+  Previously with the wrong major version which also has the release version, it makes all the different versions of lib to be presented 
+  as different entities, which means newer version won't replace the older version. The latest loaded one will replace all the constants
+  and functions.
+  This change will take effect until all the addons which embed this lib to replace with latest version.
 
 v1.07.7030525961 (2018/04/23)
 -----------------------------
