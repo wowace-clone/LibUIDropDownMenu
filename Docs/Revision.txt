@@ -2,6 +2,15 @@ $Id$
 Revision History:
 =================
 
+v1.08.8000127165 (2018/07/25)
+-----------------------------
+- Sync with WoW 8.0.1.27165
+  - Added L_UIDropDownMenu_SetDisplayMode()
+  - Added L_UIDropDownMenuButtonInvisibleButton_OnEnter()
+  - Added L_UIDropDownMenuButtonInvisibleButton_OnLeave()
+  - Added L_UIDropDownMenuButton_OnEnter()
+  - Added L_UIDropDownMenuButton_OnLeave()
+
 v1.08.8000126433 (2018/04/24)
 -----------------------------
 - Sync with WoW 8.0.1.26433
