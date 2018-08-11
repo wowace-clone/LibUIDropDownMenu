@@ -2,6 +2,11 @@ $Id$
 Revision History:
 =================
 
+v1.08.8000127326 (2018/08/11)
+-----------------------------
+- Workaround to get rid of addons which are still using old version of this library
+  (thanks to ddcorkum)
+
 v1.08.8000127165 (2018/07/25)
 -----------------------------
 - Sync with WoW 8.0.1.27165

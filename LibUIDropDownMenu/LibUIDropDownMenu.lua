@@ -12,11 +12,13 @@ local wipe = table.wipe
 local CreateFrame, GetCursorPosition, GetCVar, GetScreenHeight, GetScreenWidth, OpenColorPicker, PlaySound = CreateFrame, GetCursorPosition, GetCVar, GetScreenHeight, GetScreenWidth, OpenColorPicker, PlaySound
 
 -- ----------------------------------------------------------------------------
+local WRONG_VERSION = "LibUIDropDownMenu-1.07.7030024931"
 local MAJOR_VERSION = "LibUIDropDownMenu"
 local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
 
 local LibStub = _G.LibStub
 if not LibStub then error(MAJOR_VERSION .. " requires LibStub.") end
+local wronglib = LibStub:NewLibrary(WRONG_VERSION, MINOR_VERSION)
 local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
 if not lib then return end
 
