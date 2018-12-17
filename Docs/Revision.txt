@@ -2,6 +2,11 @@ $Id$
 Revision History:
 =================
 
+v1.08.8010028768 (2018/12/17)
+-----------------------------
+- Update to sync with 8.0.1 build 28768
+- ToC update
+
 v1.08.8000127326 (2018/08/11)
 -----------------------------
 - Workaround to get rid of addons which are still using old version of this library

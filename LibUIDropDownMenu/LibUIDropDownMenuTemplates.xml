@@ -170,7 +170,6 @@
 		<HighlightFont style="GameFontHighlightSmallLeft"/>
 		<DisabledFont style="GameFontDisableSmallLeft"/>
 	</Button>
-	
 	<Button name="L_UIDropDownListTemplate" hidden="true" frameStrata="DIALOG" enableMouse="true" virtual="true">
 		<Frames>
 			<Frame name="$parentBackdrop" setAllPoints="true">
@@ -206,13 +205,6 @@
 				</Scripts>
 			</Frame>
 			<Button name="$parentButton1" inherits="L_UIDropDownMenuButtonTemplate" id="1"/>
-			<Button name="$parentButton2" inherits="L_UIDropDownMenuButtonTemplate" id="2"/>
-			<Button name="$parentButton3" inherits="L_UIDropDownMenuButtonTemplate" id="3"/>
-			<Button name="$parentButton4" inherits="L_UIDropDownMenuButtonTemplate" id="4"/>
-			<Button name="$parentButton5" inherits="L_UIDropDownMenuButtonTemplate" id="5"/>
-			<Button name="$parentButton6" inherits="L_UIDropDownMenuButtonTemplate" id="6"/>
-			<Button name="$parentButton7" inherits="L_UIDropDownMenuButtonTemplate" id="7"/>
-			<Button name="$parentButton8" inherits="L_UIDropDownMenuButtonTemplate" id="8"/>
 		</Frames>
 		<Scripts>
 			<OnClick>
@@ -246,7 +238,6 @@
 			</OnHide>
 		</Scripts>
 	</Button>
-	
 	<Frame name="L_UIDropDownMenuTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="40" y="32"/>
