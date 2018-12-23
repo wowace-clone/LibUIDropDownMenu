@@ -4,7 +4,7 @@
 -- ----------------------------------------------------------------------------
 local _G = getfenv(0)
 -- ----------------------------------------------------------------------------
-local MAJOR_VERSION = "LibUIDropDownMenuTemplates"
+local MAJOR_VERSION = "LibUIDropDownMenuTemplates-2.0"
 local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
 
 local LibStub = _G.LibStub
@@ -54,4 +54,40 @@ end
 
 function L_UIDropDownCustomMenuEntryMixin:OnLeave()
 	L_UIDropDownMenu_StartCounting(self:GetOwningDropdown());
+end
+
+-- //////////////////////////////////////////////////////////////
+-- L_UIDropDownCustomMenuEntryTemplate
+function L_Create_UIDropDownCustomMenuEntry(name, parent)
+	local f = _G[name] or CreateFrame("Frame", name, parent or nil)
+	f:EnableMouse(true)
+	f:Hide()
+	
+	f:SetScript("OnEnter", function(self)
+		L_UIDropDownMenu_StopCounting(self:GetOwningDropdown())
+	end)
+	f:SetScript("OnLeave", function(self)
+		L_UIDropDownMenu_StartCounting(self:GetOwningDropdown())
+	end)
+	
+	-- I am not 100% sure if below works for replacing the mixins
+	f:SetScript("GetPreferredEntryWidth", function(self)
+		return self:GetWidth()
+	end)
+	f:SetScript("SetOwningButton", function(self, button)
+		self:SetParent(button:GetParent())
+		self.owningButton = button
+		self:OnSetOwningButton()
+	end)
+	f:SetScript("GetOwningDropdown", function(self)
+		return self.owningButton:GetParent()
+	end)
+	f:SetScript("SetContextData", function(self, contextData)
+		self.contextData = contextData
+	end)
+	f:SetScript("GetContextData", function(self)
+		return self.contextData
+	end)
+	
+	return f
 end
