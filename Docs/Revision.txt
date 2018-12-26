@@ -2,7 +2,7 @@ $Id$
 Revision History:
 =================
 
-v2.00.8010028833 (2018/12/31)
+v2.00.8010028833 (2018/12/27)
 -----------------------------
 - Migrate template to Lua function call
   (Refer to below page for more details:
