@@ -1287,8 +1287,8 @@ function L_ToggleDropDownMenu(level, value, dropDownFrame, anchorName, xOffset, 
 	L_UIDropDownMenuDelegate:SetAttribute("createframes", true);
 	L_UIDROPDOWNMENU_MENU_LEVEL = level;
 	L_UIDROPDOWNMENU_MENU_VALUE = value;
-	local listFrame = _G["L_DropDownList"..level];
 	local listFrameName = "L_DropDownList"..level;
+	local listFrame = _G[listFrameName];
 	local tempFrame;
 	local point, relativePoint, relativeTo;
 	if ( not dropDownFrame ) then

@@ -2,6 +2,11 @@ $Id$
 Revision History:
 =================
 
+v2.01.8020031429 (2019/08/12)
+-----------------------------
+- Update to sync with 8.2.0 build 31429
+- ToC update
+
 v2.00.8010028833 (2018/12/27)
 -----------------------------
 - Migrate template to Lua function call
