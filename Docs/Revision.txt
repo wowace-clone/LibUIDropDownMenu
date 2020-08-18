@@ -2,6 +2,10 @@ $Id$
 Revision History:
 =================
 
+v3.00.9000135522 (2020/08/19)
+-----------------------------
+- Shadowlands support and backward compatibility for both WoW classic and BFA
+
 v2.01.8020031429 (2019/08/12)
 -----------------------------
 - Update to sync with 8.2.0 build 31429

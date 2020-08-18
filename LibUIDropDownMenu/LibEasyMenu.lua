@@ -19,7 +19,7 @@
 -- ----------------------------------------------------------------------------
 local _G = getfenv(0)
 -- ----------------------------------------------------------------------------
-local MAJOR_VERSION = "LibEasyMenu"
+local MAJOR_VERSION = "LibEasyMenu-1.0"
 local MINOR_VERSION = 90000 + tonumber(("$Rev$"):match("%d+"))
 
 local LibStub = _G.LibStub
